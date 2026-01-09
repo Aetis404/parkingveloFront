@@ -1,0 +1,72 @@
+.map-container {
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.header-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #666;
+  margin: 0;
+  font-size: 14px;
+}
+
+#map {
+  height: calc(100vh - 250px);
+  min-height: 500px;
+  width: 80%;
+  margin: 0 auto;    
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1;
+}
+
+
+#map.hidden {
+  visibility: hidden;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border: 1px solid #fcc;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    padding: 10px;
+  }
+  
+  #map {
+    height: 400px;
+    min-height: 300px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+}

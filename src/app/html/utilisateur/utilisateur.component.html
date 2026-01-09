@@ -1,0 +1,58 @@
+<div class="utilisateur-container">
+  <div class="header-section">
+    <h2>Gestion des Utilisateurs</h2>
+    <button mat-raised-button color="primary" (click)="creerUtilisateur()">
+      Créer Utilisateur
+    </button>
+  </div>
+  
+  <div style="overflow-x: auto; margin-bottom: 20px;">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let utilisateur"> {{utilisateur.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef> Nom </th>
+        <td mat-cell *matCellDef="let utilisateur"> {{utilisateur.nom}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="prenom">
+        <th mat-header-cell *matHeaderCellDef> Prénom </th>
+        <td mat-cell *matCellDef="let utilisateur"> {{utilisateur.prenom}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="mail">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let utilisateur"> {{utilisateur.mail}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef> Username </th>
+        <td mat-cell *matCellDef="let utilisateur"> {{utilisateur.username}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let utilisateur">
+          <button mat-raised-button color="primary" (click)="modifier(utilisateur)">
+            Modifier
+          </button>
+          <span class="delete-icon" (click)="supprimer(utilisateur)">×</span>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+    </table>
+  </div>
+  
+  <mat-paginator  [pageSizeOptions]="[5, 10, 20]" 
+                 [pageSize]="5"
+                 showFirstLastButtons
+                 aria-label="Sélectionner la page">
+  </mat-paginator>
+</div>

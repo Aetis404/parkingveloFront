@@ -1,0 +1,28 @@
+<div class="login-page">
+  <div class="login-card">
+    <div class="login-header">
+      <h1>Connexion</h1>
+      <p>Parking Velo DB</p>
+    </div>
+    
+    <div class="login-form">
+      <div class="input-group">
+        <label>Nom d'utilisateur</label>
+        <input type="text" [(ngModel)]="username" placeholder="Entrez votre nom d'utilisateur" [disabled]="isLoading">
+      </div>
+      
+      <div class="input-group">
+        <label>Mot de passe</label>
+        <input type="password" [(ngModel)]="password" placeholder="Entrez votre mot de passe" [disabled]="isLoading">
+      </div>
+      
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+      
+      <button (click)="onSubmit()" [disabled]="isLoading">
+        {{ isLoading ? 'CONNEXION...' : 'Valider' }}
+      </button>
+    </div>
+  </div>
+</div>

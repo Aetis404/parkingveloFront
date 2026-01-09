@@ -1,0 +1,15 @@
+<header *ngIf="authService.isAuthenticated()">
+  <h1>Parking Velo DB</h1>
+  <nav>
+    <a routerLink="/velos">Vélos</a>
+    <a routerLink="/map">Carte</a>
+    <a routerLink="/reservations">Réservations</a>
+    <a routerLink="/utilisateurs">Utilisateurs</a>
+  </nav>
+  <div class="user-section">
+    <span class="username">{{ username }}</span>
+    <button mat-raised-button color="primary" class="logout-btn" (click)="logout()">Déconnexion</button>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,181 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+}
+
+
+
+header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+header * {
+  color: #ffffff;
+}
+
+header h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+header a, header button {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+header a:hover, header button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.logout-btn {
+  background-color: #673ab7;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #5e35b1;
+  box-shadow: 0 4px 8px rgba(103, 58, 183, 0.4);
+}
+
+
+h1 {
+  color: #2d3748;  
+  margin: 20px 0;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  
+}
+
+button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 8px rgba(103, 58, 183, 0.4);;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+thead th {
+  color: #ffffff;
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f7fafc;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody td {
+  padding: 16px;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+header button,
+button.mat-mdc-raised-button:not(.mat-mdc-paginator-navigation-button) {
+  background-color: #673ab7;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+header button:hover,
+button.mat-mdc-raised-button:not(.mat-mdc-paginator-navigation-button):hover {
+  background-color: #5e35b1;
+  box-shadow: 0 4px 8px rgba(103, 58, 183, 0.4);;
+}
+
+::ng-deep .utilisateur-dialog-no-padding .mat-mdc-dialog-container {
+  padding: 0;
+  overflow: hidden;
+}
+
+::ng-deep .utilisateur-dialog-no-padding .mat-mdc-dialog-surface {
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+::ng-deep .velo-dialog-no-padding .mat-mdc-dialog-container {
+  padding: 0;
+  overflow: hidden;
+}
+
+::ng-deep .velo-dialog-no-padding .mat-mdc-dialog-surface {
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}

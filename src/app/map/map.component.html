@@ -1,0 +1,17 @@
+<div class="map-container">
+  <div class="header-section">
+    <h1>Carte des Parkings Vélos</h1>
+    <p class="subtitle">{{ parkings.length }} parking(s) disponible(s)</p>
+  </div>
+
+  <div *ngIf="loading" class="loading-container">
+    <mat-spinner diameter="50"></mat-spinner>
+    <p>Chargement de la carte...</p>
+  </div>
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <div id="map" [class.hidden]="loading"></div>
+</div>
