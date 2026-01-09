@@ -26,25 +26,27 @@ h2 {
   overflow: hidden;
 }
 
-::ng-deep .mat-mdc-table {
-  background-color: white;
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
 ::ng-deep .mat-mdc-header-row {
-  background: linear-gradient(90deg, #6B7CE1, #6F4E9F);
+  background: linear-gradient(90deg, #6B7CE1, #6F4E9F) !important;
   height: 56px;
+  position: relative;
 }
 
 ::ng-deep .mat-mdc-header-cell {
-  background: transparent;
-  color: white;
+  background: transparent !important;
+  color: white !important;
   font-size: 14px;
   font-weight: 600;
   padding: 0 16px;
-  border: none;
+  border: none !important;
+  border-bottom: none !important;
+}
+
+::ng-deep .mat-mdc-table {
+  background-color: transparent;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 ::ng-deep .mat-mdc-cell {
