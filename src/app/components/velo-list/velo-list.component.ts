@@ -284,9 +284,10 @@ export class VeloListComponent implements OnInit, AfterViewInit {
     <div class="ultra-modern-dialog">
       <div class="gradient-header">
         <div class="icon-box">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="2"/>
-            <path d="M12 2v7.5m0 5V22m5.2-16.8l-5.3 5.3m-3.7 3.7l-5.3 5.3m16.1 0l-5.3-5.3m-3.7-3.7l-5.3-5.3"/>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <path d="M9 8h4a3 3 0 0 1 0 6H9V8z"/>
+            <line x1="9" y1="8" x2="9" y2="17"/>
           </svg>
         </div>
         <h1>{{ data.mode === 'edit' ? 'Modifier le parking vélo' : 'Ajouter un parking vélo' }}</h1>
