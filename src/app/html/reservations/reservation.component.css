@@ -37,7 +37,7 @@
 }
 
 ::ng-deep .filter-field input {
-  color: #333;
+  color: #333 !important;
 }
 
 ::ng-deep .filter-field .mat-mdc-input-element::placeholder {
