@@ -8,8 +8,9 @@ import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'velos', pathMatch: 'full' },
-  { path: 'velos', component: VeloListComponent },
-  { path: 'reservations', component: ReservationComponent},
-  { path: 'utilisateurs', component: UtilisateurComponent},
-  { path: 'map', component: MapComponent}
+  { path: 'connexion', component: ConnexionComponent },
+  { path: 'velos', component: VeloListComponent, canActivate: [authGuard] },
+  { path: 'reservations', component: ReservationComponent, canActivate: [authGuard] },
+  { path: 'utilisateurs', component: UtilisateurComponent, canActivate: [authGuard] },
+  { path: 'map', component: MapComponent, canActivate: [authGuard] }
 ];
